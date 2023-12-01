@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <PrealoaderComp></PrealoaderComp>
     <NavbarComp></NavbarComp>
     <div>
       <router-view />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import PrealoaderComp from "./components/PrealoaderComp.vue";
 import NavbarComp from "./components/layout/NavbarComp.vue";
 export default {
   data() {
@@ -15,6 +17,7 @@ export default {
   },
   components: {
     NavbarComp,
+    PrealoaderComp,
   },
 };
 </script>

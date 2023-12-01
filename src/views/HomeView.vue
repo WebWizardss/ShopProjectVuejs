@@ -12,14 +12,9 @@
                   <h3>qsdsq</h3>
                   <div class="py-4 d-flex justify-content-center">
                     <div class="mx-4">
-                      <a href="./auth/login/ "
-                        ><button class="button">SigIn</button></a
-                      >
-                    </div>
-                    <div class="">
-                      <a href="./auth/signup/"
-                        ><button class="button">SignUp</button></a
-                      >
+                      <RouterLink to="login">
+                        <button class="button">SigIn</button>
+                      </RouterLink>
                     </div>
                   </div>
                 </div>

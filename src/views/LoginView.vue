@@ -158,7 +158,7 @@ export default {
         this.erroemessage = "";
         this.store.AddUser(this.users[IndexUser]);
         let test = new SpeechSynthesisUtterance(
-          "welcome ya si" + this.users[IndexUser].nom + "ya maalem"
+          "welcome " + this.users[IndexUser].nom
         );
         speechSynthesis.speak(test);
         setTimeout(() => {

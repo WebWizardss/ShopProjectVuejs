@@ -10,5 +10,6 @@ import "bootstrap/js/dist/dropdown";
 //create instance
 import { createPinia } from "pinia";
 const pinia = createPinia();
+import VueConfetti from "vue-confetti";
 
-createApp(App).use(pinia).use(router).mount("#app");
+createApp(App).use(pinia).use(VueConfetti).use(router).mount("#app");

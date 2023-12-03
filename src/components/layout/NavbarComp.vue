@@ -192,6 +192,7 @@ export default {
       }
     },
     GeneratePdf() {
+      this.$confetti.start();
       const doc = new jsPDF();
       doc.addImage(
         require("../../assets/images/img1.png"),
@@ -237,6 +238,7 @@ export default {
         doc.internal.pageSize.height - 20,
         "center"
       );
+      setTimeout(() => this.$confetti.stop(), 3000);
       this.store.clearProduct();
       doc.save("resatu.pdf");
     },

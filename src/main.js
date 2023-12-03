@@ -7,4 +7,8 @@ import "bootstrap/js/dist/offcanvas";
 import "bootstrap/js/dist/alert";
 import "bootstrap/js/dist/modal";
 import "bootstrap/js/dist/dropdown";
-createApp(App).use(router).mount("#app");
+//create instance
+import { createPinia } from "pinia";
+const pinia = createPinia();
+
+createApp(App).use(pinia).use(router).mount("#app");

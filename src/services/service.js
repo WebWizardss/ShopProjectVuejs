@@ -17,4 +17,8 @@ export default {
   getUserById(id) {
     return ApiClient.get("/users/" + id);
   },
+
+  getProducts() {
+    return ApiClient.get("/products");
+  },
 };

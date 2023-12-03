@@ -11,7 +11,7 @@
                   <h2>qsdq</h2>
                   <h3>qsdsq</h3>
                   <div class="py-4 d-flex justify-content-center">
-                    <div class="mx-4">
+                    <div class="mx-4" v-if="!IsAuth">
                       <RouterLink to="login">
                         <button class="button">SigIn</button>
                       </RouterLink>
@@ -44,7 +44,12 @@ import FooterComp from "@/components/layout/FooterComp.vue";
 import ContactComp from "@/components/ContactComp.vue";
 import TeamsComp from "@/components/TeamsComp.vue";
 import ServiceComp from "@/components/ServiceComp.vue";
+import { UserStore } from "../store/ServicePinia.js";
 export default {
+  setup() {
+    const store = UserStore();
+    return { store };
+  },
   name: "HomeView",
   data() {
     return {};
@@ -54,6 +59,11 @@ export default {
     TeamsComp,
     ContactComp,
     FooterComp,
+  },
+  computed: {
+    IsAuth() {
+      return this.store.getUser ? true : false;
+    },
   },
 };
 </script>

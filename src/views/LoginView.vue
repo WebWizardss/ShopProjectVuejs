@@ -123,7 +123,15 @@
 
 <script>
 import UserLogin from "../services/service.js";
+import { UserStore } from "../store/ServicePinia.js";
 export default {
+  //composition api
+  setup() {
+    const store = UserStore();
+    return {
+      store,
+    };
+  },
   data() {
     return {
       email: "",
@@ -148,7 +156,16 @@ export default {
         this.erroemessage = "User Not Found";
       } else {
         this.erroemessage = "";
-        alert(this.users[IndexUser].email);
+        this.store.AddUser(this.users[IndexUser]);
+        let test = new SpeechSynthesisUtterance(
+          "welcome ya si" + this.users[IndexUser].nom + "ya maalem"
+        );
+        speechSynthesis.speak(test);
+        setTimeout(() => {
+          this.$router.push({ name: "home" });
+          //this.$router.go();
+        }, 3000);
+        //navigate
       }
       // console.log(IndexUser);
     },

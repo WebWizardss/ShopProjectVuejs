@@ -93,20 +93,23 @@
           <li class="ms-3">
             <a class="link-body-emphasis" href="#"
               ><svg class="bi" width="24" height="24">
-                <use xlink:href="#twitter" /></svg
-            ></a>
+                <use xlink:href="#twitter" />
+              </svg>
+            </a>
           </li>
           <li class="ms-3">
             <a class="link-body-emphasis" href="#"
               ><svg class="bi" width="24" height="24">
-                <use xlink:href="#instagram" /></svg
-            ></a>
+                <use xlink:href="#instagram" />
+              </svg>
+            </a>
           </li>
           <li class="ms-3">
-            <a class="link-body-emphasis" href="#"
-              ><svg class="bi" width="24" height="24">
-                <use xlink:href="#facebook" /></svg
-            ></a>
+            <a class="link-body-emphasis" href="#">
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook" />
+              </svg>
+            </a>
           </li>
         </ul>
       </div>

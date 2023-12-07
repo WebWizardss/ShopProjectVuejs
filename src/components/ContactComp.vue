@@ -5,13 +5,14 @@
         <div class="text-center py-4">
           <h2 class="text-uppercase">shop</h2>
         </div>
-        <form class="shadow p-4 m-3 rounded">
+        <form class="shadow p-4 m-3 rounded" @submit.prevent="addreview">
           <h4 class="fw-bolder text-primary">Form</h4>
           <p class="text-muted-primary">Test</p>
           <div class="row">
             <div class="col-lg-6">
               <div class="mb-3">
                 <input
+                  v-model="name"
                   type="name"
                   name="name"
                   required
@@ -20,6 +21,7 @@
               </div>
               <div class="mb-3">
                 <input
+                  v-model="email"
                   type="email"
                   name="email"
                   required
@@ -30,6 +32,7 @@
               </div>
               <div class="mb-3">
                 <textarea
+                  v-model="message"
                   required
                   class="shadow rounded"
                   style="outline: none; border: none; padding: 10px"
@@ -95,9 +98,27 @@
 </template>
 
 <script>
+import contact from "@/services/contact.js";
 export default {
   data() {
-    return {};
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    addreview() {
+      contact
+        .addReviews({
+          nom: this.name,
+          email: this.email,
+          message: this.message,
+        })
+        .then((res) => {
+          console.log(res);
+        });
+    },
   },
 };
 </script>

@@ -32,7 +32,7 @@
               </a>
             </li>
             <li class="nav-item" v-if="!IsAuth">
-              <RouterLink to="/HomeView">
+              <RouterLink to="/">
                 <a class="nav-link" href="#">
                   home
                   <i class="material-icons mx-2">home</i>

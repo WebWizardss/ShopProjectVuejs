@@ -14,8 +14,8 @@
                 <i class="material-icons mx-2">shopping_cart</i>
               </span>
             </p>
-            <h3 class="titre_box">fsdf</h3>
-            <p class="description">sdfsd</p>
+            <h3 class="titre_box">Offering</h3>
+            <p class="description">Our amazing services</p>
           </div>
         </div>
       </div>

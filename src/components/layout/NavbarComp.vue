@@ -31,6 +31,14 @@
                 <i class="material-icons mx-2">shopping_cart</i>
               </a>
             </li>
+            <li class="nav-item" v-if="!IsAuth">
+              <RouterLink to="/HomeView">
+                <a class="nav-link" href="#">
+                  home
+                  <i class="material-icons mx-2">home</i>
+                </a>
+              </RouterLink>
+            </li>
             <li class="nav-item" v-if="IsAuth" @click="logutUser()">
               <a class="nav-link" href="#download">
                 Logout

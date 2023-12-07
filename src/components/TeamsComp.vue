@@ -15,11 +15,11 @@
       >
         <div class="container_box col-lg-5">
           <div class="card_box">
-            <img src="../assets/images/img1.png" alt="" />
+            <img src="../assets/images/wessim.jpg" alt="" />
           </div>
 
           <div class="content_box">
-            <h3 style="color: #4fc3dc">IHEB LWEES</h3>
+            <h3 style="color: #4fc3dc">wessim</h3>
             <div class="all_link">
               <a class="mx-2" href="#!">
                 <i class="material-icons mx-2">facebook</i>
@@ -36,10 +36,29 @@
 
         <div class="container_box col-lg-5">
           <div class="card_box">
-            <img src="../assets/images/img1.png" alt="" />
+            <img src="../assets/images/lyna.jpg" alt="" />
           </div>
           <div class="content_box">
             <h3 style="color: #ff2d75">LYNA</h3>
+            <div class="all_link">
+              <a class="mx-2" href="#!">
+                <i class="material-icons mx-2">facebook</i>
+              </a>
+              <a class="mx-2" href="#!">
+                <i class="material-icons mx-2">facebook</i>
+              </a>
+              <a class="mx-2" href="#!">
+                <i class="material-icons mx-2">facebook</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container_box col-lg-5">
+          <div class="card_box">
+            <img src="../assets/images/iheb.png" alt="" />
+          </div>
+          <div class="content_box">
+            <h3 style="color: #ff2d75">iheb</h3>
             <div class="all_link">
               <a class="mx-2" href="#!">
                 <i class="material-icons mx-2">facebook</i>
@@ -130,9 +149,11 @@ export default {
 .container_box:hover .content_box {
   transform: translateY(-40px);
 }
+
 .container_box .all_link {
   text-align: center;
 }
+
 .container_box .all_link a {
   color: #fff !important;
 }

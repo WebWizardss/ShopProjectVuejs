@@ -3,7 +3,7 @@
     <article id="contact_us" class="contact py-1" data-aos="fade-up">
       <div class="container py-5">
         <div class="text-center py-4">
-          <h2 class="text-uppercase">Talel</h2>
+          <h2 class="text-uppercase">shop</h2>
         </div>
         <form class="shadow p-4 m-3 rounded">
           <h4 class="fw-bolder text-primary">Form</h4>
@@ -51,7 +51,7 @@
               <div class="row text-center">
                 <div class="col-md-12 d-lg-block d-none text-center mb-5">
                   <img
-                    src="../assets/images/img1.png"
+                    src="../assets/images/shop.webp"
                     width="100%"
                     height="100%"
                     alt=""
@@ -65,7 +65,7 @@
                       </span>
                     </div>
                     <div class="col-md-2">
-                      Bahra <span class="text-danger">❤</span>
+                      iset <span class="text-danger">❤</span>
                     </div>
                   </div>
                   <div class="row mb-3">
@@ -82,7 +82,7 @@
                         <i class="material-icons mx-2">shopping_cart</i>
                       </span>
                     </div>
-                    <div class="col-md-2">talelmejri8@gmail.com</div>
+                    <div class="col-md-2">shop@gmail.com</div>
                   </div>
                 </div>
               </div>

@@ -7,9 +7,9 @@
             <div class="py-4">
               <div class="py-5 mt-5">
                 <div class="intro_text text-center">
-                  <h1>talel</h1>
-                  <h2>qsdq</h2>
-                  <h3>qsdsq</h3>
+                  <h1>welcom</h1>
+                  <h2>to our</h2>
+                  <h3>market</h3>
                   <div class="py-4 d-flex justify-content-center">
                     <div class="mx-4" v-if="!IsAuth">
                       <RouterLink to="login">

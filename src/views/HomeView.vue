@@ -7,12 +7,11 @@
             <div class="py-4">
               <div class="py-5 mt-5">
                 <div class="intro_text text-center">
-                  <h1>welcom</h1>
-                  <h2>to our</h2>
-                  <h3>market</h3>
+                  <h1 data-aos="fade-up">welcom to our</h1>
+                  <h3 data-aos="fade-up">Shop</h3>
                   <div class="py-4 d-flex justify-content-center">
                     <div class="mx-4" v-if="!IsAuth">
-                      <RouterLink to="login">
+                      <RouterLink to="login" data-aos="fade-up">
                         <button class="button">SigIn</button>
                       </RouterLink>
                     </div>
@@ -21,13 +20,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 d-lg-block d-none text-center">
-            <img
-              src="../assets/images/img1.png"
-              width="100%"
-              height="100%"
-              alt=""
-            />
+          <div class="col-lg-6" data-aos="zoom-in">
+            <img :src="img" alt="image not found" />
           </div>
         </div>
       </div>
@@ -52,7 +46,9 @@ export default {
   },
   name: "HomeView",
   data() {
-    return {};
+    return {
+      img: require("../assets/images/shopclothes.jpg"),
+    };
   },
   components: {
     ServiceComp,
@@ -121,5 +117,10 @@ export default {
   h2 {
     font-size: 16px;
   }
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 </style>

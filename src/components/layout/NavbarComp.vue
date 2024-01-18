@@ -5,7 +5,7 @@
       id="mainNav"
     >
       <div class="container px-5">
-        <a class="navbar-brand fw-bold" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand fw-bold" href="#page-top">Shop</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,9 +31,9 @@
                 <i class="material-icons mx-2">shopping_cart</i>
               </a>
             </li>
-            <li class="nav-item" v-if="!IsAuth">
+            <li class="nav-item">
               <RouterLink to="/">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   home
                   <i class="material-icons mx-2">home</i>
                 </a>
@@ -44,6 +44,15 @@
                 Logout
                 <i class="material-icons mx-2">logout</i>
               </a>
+            </li>
+
+            <li class="nav-item" v-if="IsAdmin">
+              <RouterLink to="/ReviewList">
+                <a class="nav-link" href="#">
+                  Reviews
+                  <i class="material-icons mx-2">reviews</i>
+                </a>
+              </RouterLink>
             </li>
           </ul>
           <RouterLink to="/ShoppingView">
@@ -203,8 +212,8 @@ export default {
       this.$confetti.start();
       const doc = new jsPDF();
       doc.addImage(
-        require("../../assets/images/img1.png"),
-        "png",
+        require("../../assets/images/shopclothes.jpg"),
+        "jpg",
         2,
         2,
         20,
@@ -261,6 +270,14 @@ export default {
         prix += e.prod["prix"] * e.qte;
       });
       return prix;
+    },
+    IsAdmin() {
+      var user = JSON.parse(localStorage.getItem("user"));
+      if (user) {
+        return user["IsAdmin"];
+      } else {
+        return false;
+      }
     },
   },
   mounted() {},

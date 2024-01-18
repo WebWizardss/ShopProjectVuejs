@@ -5,11 +5,13 @@
         <div class="row">
           <div class="col mb-5" v-for="product in prod" :key="product">
             <div class="card h-100">
-              <img
-                class="card-img-top"
-                :src="require(`../../public/images/${product.image}`)"
-                :alt="product.nom"
-              />
+              <router-link :to="/DetailsView/ + product.id">
+                <img
+                  class="card-img-top"
+                  :src="require(`../../public/images/${product.image}`)"
+                  :alt="product.nom"
+                />
+              </router-link>
               <div class="card-body p-4">
                 <div class="text-center">
                   <h5 class="fw-bolder">{{ product.nom }}</h5>
@@ -21,7 +23,13 @@
                   {{ product.Description }}
                 </div>
               </div>
-              <div class="btn btn-info" @click="Addcar(product)">AddCard</div>
+              <button
+                class="btn btn-info"
+                @click="Addcar(product)"
+                :disabled="!IsAuth"
+              >
+                AddCard
+              </button>
             </div>
           </div>
         </div>
@@ -51,7 +59,13 @@
                 {{ product.Description }}
               </div>
             </div>
-            <div class="btn btn-info" @click="Addcar(product)">AddCard</div>
+            <button
+              class="btn btn-info"
+              @click="Addcar(product)"
+              :disabled="!IsAuth"
+            >
+              AddCard
+            </button>
           </div>
         </div>
       </div>
@@ -60,7 +74,13 @@
 </template>
 
 <script>
+import { UserStore } from "@/store/ServicePinia.js";
 export default {
+  setup() {
+    const store = UserStore();
+    return { store };
+  },
+
   props: {
     ProductFilter: Object,
     selectCategorie: String,
@@ -71,6 +91,11 @@ export default {
   methods: {
     Addcar(val) {
       this.$emit("addcart", val);
+    },
+  },
+  computed: {
+    IsAuth() {
+      return this.store.getUser ? true : false;
     },
   },
 };

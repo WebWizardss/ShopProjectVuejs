@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-aos="fade-right">
     <article class="thank py-4">
       <h3
         class="fw-bolder text-center"
@@ -13,52 +13,13 @@
         data-aos="fade-down"
         data-aos-delay="500"
       >
-        <div class="container_box col-lg-5">
+        <div class="container_box col-lg-5" v-for="user in tabuser" :key="user">
           <div class="card_box">
-            <img src="../assets/images/wessim.jpg" alt="" />
+            <img :src="user.img" alt="" />
           </div>
 
           <div class="content_box">
-            <h3 style="color: #4fc3dc">wessim</h3>
-            <div class="all_link">
-              <a class="mx-2" href="#!">
-                <i class="material-icons mx-2">facebook</i>
-              </a>
-              <a class="mx-2" href="#!">
-                <i class="material-icons mx-2">facebook</i>
-              </a>
-              <a class="mx-2" href="#!">
-                <i class="material-icons mx-2">facebook</i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="container_box col-lg-5">
-          <div class="card_box">
-            <img src="../assets/images/lyna.jpg" alt="" />
-          </div>
-          <div class="content_box">
-            <h3 style="color: #ff2d75">LYNA</h3>
-            <div class="all_link">
-              <a class="mx-2" href="#!">
-                <i class="material-icons mx-2">facebook</i>
-              </a>
-              <a class="mx-2" href="#!">
-                <i class="material-icons mx-2">facebook</i>
-              </a>
-              <a class="mx-2" href="#!">
-                <i class="material-icons mx-2">facebook</i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="container_box col-lg-5">
-          <div class="card_box">
-            <img src="../assets/images/iheb.png" alt="" />
-          </div>
-          <div class="content_box">
-            <h3 style="color: #ff2d75">iheb</h3>
+            <h3 :style="'color:' + user.color">{{ user.name }}</h3>
             <div class="all_link">
               <a class="mx-2" href="#!">
                 <i class="material-icons mx-2">facebook</i>
@@ -80,7 +41,25 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      tabuser: [
+        {
+          name: "wessim",
+          img: require("../assets/images/wessim.jpg"),
+          color: "#4fc3dc",
+        },
+        {
+          name: "lyna",
+          img: require("../assets/images/lyna.jpg"),
+          color: "#ff2d75",
+        },
+        {
+          name: "iheb",
+          img: require("../assets/images/iheb.png"),
+          color: "#4fc3dc",
+        },
+      ],
+    };
   },
 };
 </script>

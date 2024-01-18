@@ -1,15 +1,9 @@
 {
   "reviews": [
     {
-      "id": 1,
-      "nom": "wessim",
-      "email": "wessim@gmail.com",
-      "message": "message"
-    },
-    {
-      "nom": "wess",
+      "nom": "mohamedwessim",
       "email": "mohamedwessim56@gmail.com",
-      "message": "gchg",
+      "message": "bon",
       "id": 2
     }
   ]

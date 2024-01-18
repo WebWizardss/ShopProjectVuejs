@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import ShoppingView from "../views/ShoppingView.vue";
+import DetailsView from "../views/DetailsView.vue";
+import ReviewList from "../views/ReviewsListView.vue";
+import { UserStore } from "../store/ServicePinia";
 const routes = [
   {
     path: "/",
@@ -14,9 +17,19 @@ const routes = [
     component: LoginView,
   },
   {
+    path: "/DetailsView/:id",
+    name: "DetailsView",
+    component: DetailsView,
+  },
+  {
     path: "/ShoppingView",
     name: "ShoppingView",
     component: ShoppingView,
+  },
+  {
+    path: "/ReviewList",
+    name: "ReviewList",
+    component: ReviewList,
   },
   {
     path: "/about",
@@ -32,6 +45,16 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const store = UserStore();
+  let user = store.user;
+  if (to.name === "ReviewList" && (!user || user.IsAdmin == false)) {
+    next({ name: "LoginView" });
+  } else {
+    next();
+  }
 });
 
 export default router;

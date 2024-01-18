@@ -7,7 +7,7 @@
         </div>
         <form class="shadow p-4 m-3 rounded" @submit.prevent="addreview">
           <h4 class="fw-bolder text-primary">Form</h4>
-          <p class="text-muted-primary">Test</p>
+          <p class="text-muted-primary">Name</p>
           <div class="row">
             <div class="col-lg-6">
               <div class="mb-3">
@@ -19,6 +19,7 @@
                   class="form-control shadow"
                 />
               </div>
+              <p class="text-muted-primary">Email</p>
               <div class="mb-3">
                 <input
                   v-model="email"
@@ -30,6 +31,7 @@
                   aria-describedby="emailHelp"
                 />
               </div>
+              <p class="text-muted-primary">Description</p>
               <div class="mb-3">
                 <textarea
                   v-model="message"
@@ -64,7 +66,7 @@
                   <div class="row mb-3">
                     <div class="col-md-2">
                       <span class="fa-stack fa-1x">
-                        <i class="material-icons mx-2">shopping_cart</i>
+                        <i class="material-icons mx-2">school</i>
                       </span>
                     </div>
                     <div class="col-md-2">
@@ -74,7 +76,7 @@
                   <div class="row mb-3">
                     <div class="col-md-2">
                       <span class="fa-stack fa-1x">
-                        <i class="material-icons mx-2">shopping_cart</i>
+                        <i class="material-icons mx-2">call</i>
                       </span>
                     </div>
                     <div class="col-md-2">+21629036027</div>
@@ -82,7 +84,7 @@
                   <div class="row">
                     <div class="col-md-2">
                       <span class="fa-stack fa-1x">
-                        <i class="material-icons mx-2">shopping_cart</i>
+                        <i class="material-icons mx-2">mail</i>
                       </span>
                     </div>
                     <div class="col-md-2">shop@gmail.com</div>

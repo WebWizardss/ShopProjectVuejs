@@ -21,4 +21,7 @@ export default {
   addReviews(review) {
     return ApiClient.post("/reviews", review);
   },
+  deleteReview(id) {
+    return ApiClient.delete("/reviews/" + id);
+  },
 };

@@ -4,7 +4,11 @@
       <div class="col-xl-10 col-md-12 col-lg-12">
         <div class="row shadow-lg rounded">
           <div class="col-lg-6 d-none d-lg-block">
-            <img src="../../public/images/blackpants.png" alt="" />
+            <img
+              src="../assets/images/Login-bro.png"
+              alt=""
+              style="width: 100%; height: 100%"
+            />
           </div>
           <div class="col-lg-6 py-5">
             <div class="text-center">

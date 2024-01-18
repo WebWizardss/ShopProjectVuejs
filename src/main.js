@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/js/dist/offcanvas";
 import "bootstrap/js/dist/alert";
 import "bootstrap/js/dist/modal";
+//import "bootstrap/js/dist/backdrop";
+import "aos/dist/aos.css";
 import "bootstrap/js/dist/dropdown";
 //create instance
 import { createPinia } from "pinia";

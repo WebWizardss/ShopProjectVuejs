@@ -9,9 +9,13 @@
 </template>
 
 <script>
+import AOS from "aos";
 import PrealoaderComp from "./components/PrealoaderComp.vue";
 import NavbarComp from "./components/layout/NavbarComp.vue";
 export default {
+  mounted() {
+    AOS.init();
+  },
   data() {
     return {};
   },
